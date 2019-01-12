@@ -2,59 +2,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Faker from 'faker';
+import CommentDetail from './CommentDetail';
 
 //setup component
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={Faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 12:00pm</span>
-                    </div>
-                    <div className="text">
-                        Nice Blog Post!
-                    </div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={Faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 12:00pm</span>
-                    </div>
-                    <div className="text">
-                        Nice Blog Post!
-                    </div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={Faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 12:00pm</span>
-                    </div>
-                    <div className="text">
-                        Nice Blog Post!
-                    </div>
-                </div>
-            </div>
+            <CommentDetail author="Sam" timeAgo="Today at 5:45PM" avatar={Faker.image.avatar()} comment="Wow Nice Post!"/>
+            <CommentDetail author="Dave" timeAgo="Today at 3:45PM" avatar={Faker.image.avatar()} comment="Very Interesting!" />
+            <CommentDetail author="Jason" timeAgo="Yesterday at 11:49PM" avatar={Faker.image.avatar()} comment="Boring AF" />
         </div>
     );
 };
